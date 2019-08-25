@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<div><center><h1>BLADES IN THE DARK</h1></center>
+<br><center><h2>PLAYBOOK<br><em>HOUND</em></h2></center>
+<p>This is a test</p></div>
+<hr/>
+<div class="grid-containercharname">
+  <div class="item1"><h2>NAME</h2><b><em><dd> {{ variables.name}} </dd></em></b></div>
+  <div class="item2"><h2>ALIAS</h2><b><em><dd> {{ variables.alias}} </dd></em></b></div>
+  <div class="item3"><h2>CREW NAME</h2><b><em><dd> {{ variables.crew_name}} </dd></em></b></div>
+  </div>
+
+<div class="grid-containercharlook">
+  <div class="item1"><h2>LOOK</h2><b><em><dd> {{ variables.look}} </dd></em></b></div>
+  <div class="item2"><h2>HERITAGE</h2><b><em><dd> {{ variables.heritage}} </dd></em></b></div>
+  <div class="item3"><h2>BACKGROUND</h2><b><em><dd> {{ variables.background}} </dd><dd> {{ variables.background_expanded}} </dd></em></b></div>
+ </div>
+<hr/>
+<div class="grid-containerstress">
+  <div class="item1"><h2>STRESS</h2>
+<label class="check1"><input type="checkbox" name="stress" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stress" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stress" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stress" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox" name="stress" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stress" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stress" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stress" value="1"><span class="checkmarkstress"></span></label>
+</div>
+<div class="item2"><h2>VICE</h2>
+<dd> {{ variables.vice}} </dd><dd> {{ variables.vice_expanded}} </dd></div>
+<div class="item3"><h2>TRAUMA</h2><dd>{{ variables.trauma_1}}</dd><dd>{{ variables.trauma_2}}</dd><dd> {{ variables.trauma_3}} </dd><dd> {{ variables.trauma_4}} </dd></div>
+</div>
+
+<hr/>
+
+<div class="grid-containerharm">
+  <div class="item1"><h2>HARM AND HEALING</h2>
+<table class="harmtable">
+<thead>
+    <tr>
+      <th>Level of Harm</th>
+      <th>Injury</th>
+      <th>Effect</th>
+      <th>Healing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LEVEL 3</td>
+      <td><dd> {{ variables.injury_lvl_3}} </dd></td>
+      <td>NEED HELP</td>
+      <td>
+<label class="check1"><input type="checkbox" name="heal3" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="heal3" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="heal3" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="heal3" value="1"><span class="checkmarkstress"></span></label>
+</td>
+    </tr>
+    
+<tr>
+      <td>LEVEL 2</td>
+      <td><dd> {{ variables.injury_lvl_2_1st}} </dd></td>
+      <td>-1 DICE</td>
+      <td>
+<label class="check1"><input type="checkbox" name="heal21" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="heal21" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="heal21" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="heal21" value="1"><span class="checkmarkstress"></span></label>
+</td>
+    </tr>
+    
+<tr>
+      <td>LEVEL 2</td>
+      <td><dd> {{ variables.injury_lv_2_2nd}} </dd></td>
+      <td>-1 DICE</td>
+      <td>
+<label class="check1"><input type="checkbox" name="heal22" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="heal22" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="heal22" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="heal22" value="1"><span class="checkmarkstress"></span></label>
+</td>
+    </tr>
+  
+  <tr>
+      <td>LEVEL 1</td>
+      <td><dd> {{ variables.injury_lvl_1_1st}} </dd></td>
+      <td>LESS EFFECT</td>
+      <td>HEALS IN DOWNTIME</td>
+    </tr>
+  
+  <tr>
+      <td>LEVEL 1</td>
+      <td><dd> {{ variables.injury_lv_1_2nd}} </dd></td>
+      <td>LESS EFFECT</td>
+      <td>HEALS IN DOWNTIME</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div><br/>
+ 
+<div class="grid-containercoins">
+<div class="item1"><h3>COINS IN HAND</h3>
+<label class="check1"><input type="checkbox" name="coin" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="coin" value="1"><span class="checkmarkstress"></span></label><br/>
+<label class="check1"><input type="checkbox"name="coin" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="coin" value="1"><span class="checkmarkstress"></span></label>
+</div>  
+<div class="item2"><h3>STASH</h3>
+<label class="check1"><input type="checkbox" name="stash" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stash" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stash" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stash" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stash" value="1"><span class="checkmarkstress"></span></label><br/>
+<label class="check1"><input type="checkbox" name="stash" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stash" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stash" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stash" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="stash" value="1"><span class="checkmarkstress"></span></label>
+</div>
+<div class="item3"><h3>LIFESTYLE LEVEL</h3>
+<label class="check1"><input type="checkbox" name="life" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="life" value="1"><span class="checkmarkstress"></span></label><br/>
+<label class="check1"><input type="checkbox"name="life" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="life" value="1"><span class="checkmarkstress"></span></label>
+</div>  
+</div><br/>
+
+<div class="grid-containerskills">
+  <div class="item1"><h3>INSIGHT SKILLS</h3>
+   <table class="skill">
+   <thead>
+  <tr><th>SKILL</th>
+  <th>POINTS</th>
+  <th>ROLL</th></tr>
+  </thead>
+  <tfoot>
+  <tr>
+  <td>ATTRIBUTE</td><td>
+<label class="check1"><input type="checkbox" name="insatt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="insatt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="insatt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="insatt" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td>HUNT</td>
+<td>
+<label class="check1"><input type="checkbox" name="hunt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="hunt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="hunt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="hunt" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+<tr>
+<td>STUDY</td>
+<td>
+<label class="check1"><input type="checkbox" name="study" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="study" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="study" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="study" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+<tr>
+<td>SURVEY</td>
+<td>
+<label class="check1"><input type="checkbox" name="surv" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="surv" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="surv" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="surv" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+<tr>
+<td>TINKER</td>
+<td>
+<label class="check1"><input type="checkbox" name="tink" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="tink" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="tink" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="tink" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr></tbody></table></div>
+  
+<div class="item2"><h3>PROWESS SKILLS</h3><table class="skill">
+<thead>
+<tr>
+<th>SKILLS</th>
+<th>POINTS</th>
+<th>ROLL</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td>ATTRIBUTE</td>
+<td>
+<label class="check1"><input type="checkbox" name="proatt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="proatt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="proatt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="proatt" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td>FINESSE</td>
+<td>
+<label class="check1"><input type="checkbox" name="fine" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="fine" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="fine" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="fine" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+<tr>
+<td>PROWL</td>
+<td>
+<label class="check1"><input type="checkbox" name="prow" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="prow" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="prow" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="prow" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+<tr>
+<td>SKIRMISH</td>
+<td>
+<label class="check1"><input type="checkbox" name="skir" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="skir" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="skir" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="skir" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+<tr>
+<td>WRECK</td>
+<td>
+<label class="check1"><input type="checkbox" name="wrec" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="wrec" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="wrec" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="wrec" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+</tbody>
+</table></div>
+  
+<div class="item3"><h3>RESOLVE SKILLS</h3><table class="skill">
+<thead>
+<tr>
+<th>SKILL</th>
+<th>POINTS</th>
+<th>ROLL</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td>ATTRIBUTE</td>
+<td>
+<label class="check1"><input type="checkbox" name="resatt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="resatt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="resatt" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="resatt" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td>ATTUNE</td>
+<td>
+<label class="check1"><input type="checkbox" name="attu" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="attu" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="attu" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="attu" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+<tr>
+<td>COMMAND</td>
+<td>
+<label class="check1"><input type="checkbox" name="comm" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="comm" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="comm" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="comm" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+<tr>
+<td>CONSORT</td>
+<td>
+<label class="check1"><input type="checkbox" name="cons" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="cons" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="cons" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="cons" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+<tr>
+<td>SWAY</td>
+<td>
+<label class="check1"><input type="checkbox" name="sway" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="sway" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="sway" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="sway" value="1"><span class="checkmarkstress"></span></label>
+</td>
+<td>ROLL</td>
+</tr>
+</tbody>
+</table>
+</div>  
+  <div class="item4"><h3>INSIGHT EXPERIENCE</h3>
+<label class="check1"><input type="checkbox" name="insexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="insexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox" name="insexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="insexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="insexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="insexp" value="1"><span class="checkmarkstress"></span></label></div>
+  
+<div class="item5"><h3>PROWESS EXPERIENCE</h3>
+<label class="check1"><input type="checkbox" name="proexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="proexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox" name="proexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="proexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="proexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="proexp" value="1"><span class="checkmarkstress"></span></label></div>
+  
+<div class="item6"><h3>RESOLVE EXPERIENCE</h3>
+<label class="check1"><input type="checkbox" name="resexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="resexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox" name="resexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="resexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="resexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="resexp" value="1"><span class="checkmarkstress"></span></label></div>
+</div><br/>
+
+<div class="grid-containerplaybook">
+  <div class="item1"><h2><b>PLAYBOOK EXPERIENCE</b></h2><br/>
+<label class="check1"><input type="checkbox" name="bookexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="bookexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox" name="bookexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="bookexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="bookexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="bookexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="bookexp" value="1"><span class="checkmarkstress"></span></label>
+<label class="check1"><input type="checkbox"name="bookexp" value="1"><span class="checkmarkstress"></span></label></div>
+  <div class="item2"><h2><b>SPECIAL ABILITIES</b></h2><br/>
+   <label class="check1"><input type="checkbox" name="Sharpshooter" value="Sharpshooter"><span class="checkmarkstress"></span></label><h3><b>SHARPSHOOTER:</b></h3><p>You can <b>push yourself</b> to do one of the following: <i>make a ranged attack at extreme distance beyond what's normal for the weapon or unleash a barrage of rapir fire to suppress te enemy</i></p>
+  <label class="check1"><input type="checkbox" name="focused" value="focused"><span class="checkmarkstress"></span></label> <h3><b>FOCUSED</b></h3><p> You may expend your <b>special armor</b> to resist a consequence of surprise or mental harm (fear, confusion,losing track of someone) or to <b>push yourself</b> for ranged combat or tracking.</p>
+  <label class="check1"><input type="checkbox" name="ghosthunter1" value="ghosthunter1"><span class="checkmarkstress"></span></label><h3><b>GHOST HUNTER:</b></h3><p>Your <b>hunting pet</b> is imbued with spirit energy. It gains <b>potency</b> when tracking or fighting the supernatural, and gains a arcane ability:<i>ghost-form,mind-link or arrow-swift</i>. Take this ability again to make your pet super useful.</p>
+  <label class="check1"><input type="checkbox" name="ghosthunter2" value="ghosthunter2"><span class="checkmarkstress"></span></label><h3><b>GHOST HUNTER:</b></h3><p>Your <b>hunting pet</b> is imbued with spirit energy. It gains <b>potency</b> when tracking or fighting the supernatural, and gains a arcane ability:<i>ghost-form,mind-link or arrow-swift</i>. Take this ability again to make your pet super useful.</p>
+  <label class="check1"><input type="checkbox" name="ghosthunter3" value="ghosthunter3"><span class="checkmarkstress"></span></label><h3><b>GHOST HUNTER:</b></h3><p>Your <b>hunting pet</b> is imbued with spirit energy. It gains <b>potency</b> when tracking or fighting the supernatural, and gains a arcane ability:<i>ghost-form,mind-link or arrow-swift</i>. Take this ability again to make your pet super useful.</p>
+  <label class="check1"><input type="checkbox" name="scout" value="scout"><span class="checkmarkstress"></span></label> <h3><b>SCOUT</b></h3><p>When you <b>gather information</b> to locate a target, you get <b>+1 effect</b>. When you hide in a prepared position or use camouflage, you get <b>+1D</b> in rolls to avoid detection.</p>
+<label class="check1"><input type="checkbox" name="survivor" value="survivor"><span class="checkmarkstress"></span></label><h3><b>SURVIVOR:</b></h3><p> From hard won experience or occult ritual, you are immune to the poisonous miasma of the Deathlands and are able to survive on the strange flora and fauna there. You gain <b>+1 STRESS box</b></p>
+  <label class="check1"><input type="checkbox" name="toughasnails" value="toughasnails"><span class="checkmarkstress"></span></label> <h3><b>TOUGH AS NAILS</b></h3><p> Penalties from harm are one level less severe (level 4 is still fatal).</p>
+ <label class="check1"><input type="checkbox" name="vengeful" value="vengeful"><span class="checkmarkstress"></span></label><h3><b>VENGEFUL</b></h3><p>You gain an additional <b>Experience trigger</b>If your crew helper you get payback also mark crew Experience points.</p>
+  <label class="check1"><input type="checkbox" name="veteran1" value="veteran1"><span class="checkmarkstress"></span></label> <h3><b>VETERAN</b></h3><small>Edit your character sheet and choose veteran 1, type in what you choose and the description.</small><dd> {{ variables.veteran_ability_1}} </dd>
+ <label class="check1"><input type="checkbox" name="veteran2" value="veteran2"><span class="checkmarkstress"></span></label> <h3><b>VETERAN</b></h3><small>Edit your character sheet and choose veteran 2, type in what you choose and the description.</small><dd> {{ variables.veteran_ability_2}} </dd>
+ <label class="check1"><input type="checkbox" name="veteran3" value="veteran3"><span class="checkmarkstress"></span></label> <h3><b>VETERAN</b></h3><small>Edit your character sheet and choose veteran 3, type in what you choose and the description.</small><dd> {{ variables.veteran_ability_3}} </dd>
+<label class="check1"><input type="checkbox" name="veteran4" value="veteran4"><span class="checkmarkstress"></span></label> <h3><b>VETERAN</b></h3><small>Edit your character sheet and choose veteran 4, type in what you choose and the description.</small><dd> {{ variables.veteran_ability_4}} </dd>
+</div>
+  <div class="item3"><h2><strong>Notes</strong></h2><b><em><dd> {{ variables.notes}} </dd></em></b></div>
+</div>
+</body>
+</html>
