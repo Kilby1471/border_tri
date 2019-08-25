@@ -1,0 +1,170 @@
+.grid-containercharname{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #404744;
+  padding: 10px;}
+ .grid-containercharname > div {
+  background-color:#b5aca8;
+  text-align: center;
+  padding:20px 0;
+  font-size: 20px;}
+.grid-containercharlook {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
+  background-color: #404744;
+  padding: 10px;}
+ .grid-containercharlook > div {
+  background-color: #b5aca8;
+  text-align: center;
+  padding: 20px 50px;
+  font-size: 20px;}
+.grid-containerstress {
+  display: grid;
+  grid-template-columns: auto ;
+  grid-gap: 10px;
+  background-color: #404744;
+  padding: 10px;}
+.grid-containerstress > div {
+  background-color:#b5aca8;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;}
+.grid-containerharm {
+  display: grid;
+  grid-template-columns: auto ;
+  grid-gap: 10px;
+  background-color: #404744;
+  padding: 10px;}
+.grid-containerharm > div {
+  background-color:#b5aca8;
+  text-align: center;
+  padding: 20px 50px;
+  font-size: 20px;}
+table.harmtable {
+  width: 100%;
+  background-color: #EBEBEB;
+  border-collapse: collapse;
+  border-width: 3px;
+  border-color: #1A2333;
+  border-style: solid;
+  color: #000000;}
+table.harmtable td,  table.harmtable th {
+  border-width: 3px;
+  border-color: #1A2333;
+  border-style: solid;
+  padding: 5px;}
+  table.harmtable thead {
+  background-color: #9E9E9E;}
+ .grid-containercoins {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5px;
+  background-color: #404744;
+  padding: 5px;}
+ .grid-containercoins > div {
+  background-color: #b5aca8;
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 20px;}
+.grid-containerskills {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color:#404744 ;
+  padding: 10px;}
+.grid-containerskills > div {
+  background-color: #b5aca8;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 20px;}
+  table.skill {
+  border: 3px solid #000000;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;}
+table.skill td,  table.skill th {
+  border: 1px solid #000000;
+  padding: 5px 4px;}
+ table.skill tbody td {
+  font-size: 13px;}
+ table.skill thead {
+  background: #9E9E9E;
+  border-bottom: 3px solid #000000;}
+ table.skill thead th {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  text-align: centre;
+  border-left: 3px solid #000000;}
+ table.skill thead th:first-child {
+  border-left: none;}
+ table.skill tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  background: #9E9E9E;
+  border-top: 3px solid #000000;}
+table.skill tfoot td {
+  font-size: 14px;}
+.grid-containerplaybook {
+  display: grid;
+  grid-template-columns: auto ;
+  grid-gap: 10px;
+  background-color: #404744;
+  padding: 10px;}
+.grid-containerplaybook > div {
+  background-color: #b5aca8;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;}
+.check1 {
+  display: circle;
+  position: relative;
+padding-top:0;  
+padding-left: 10px;
+padding-right:10px;
+margin-left:5px; 
+ margin-bottom:15px;
+margin-top:0;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;}
+  .check1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;}
+.checkmarkstress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #737373 ;}
+  .check1:hover input ~ .checkmarkstress {
+  background-color: #b3b3b3;}
+ .check1 input:checked ~ .checkmarkstress {
+  background-color:#39004d ;}
+ .checkmarkstress:after {
+  content: "";
+  position: absolute;
+  display: none;}
+.check1 input:checked ~ .checkmarkstress:after {
+  display: circle;}
+.check1 .checkmarkstress:after {
+  left: 1px;
+  top: 10px;
+  width: 10px;
+  height: 1px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);}
