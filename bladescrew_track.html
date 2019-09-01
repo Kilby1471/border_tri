@@ -1,0 +1,78 @@
+<section class="blades_in_the_dark-crew-trackable">
+<div class="container">
+	<h1>{{ variables.name }}</h1>
+     <div class="row crew info ">
+		<div class="col-md-6">
+                <div class"crewsheet-title"><dt>CREW NAME</dt></div>
+                <input placeholder="CREW NAME" class="form-control" type=string" value="{{ variables.crew_name is defined ? variables.crew_name }}"name="crew_name"/>
+             <div class="crewsheet-title"><dt>CREW TYPE</dt></div>
+            <input placeholder="CREW TYPE" class="form-control" type="string" value="{{ variables.crew_type is defined ? variables.crew_type : "" }} name="crew_type"/>
+		</div>
+		<div class="col-md-6">
+			<div class="crewsheet-title"><dt>REPUTATION</dt></div>
+            <input placeholder="REPUTATION" class="form-control" type="string" value="{{ variables.reputation is defined ? variables.reputation :"" }}" name="reputation"/>
+            <div class="crewsheet-title"><dt>LAIR</dt></div>
+            <input placeholder="LAIR" class="form-control" type="string" value="{{ variables.lair is defined ? variables.lair : "" }}" name="lair"/>
+		</div>
+	</div>	
+<div class="row strength">
+		<div class="col-md-4"><h2>STRENGTH</h2>
+            <div class="crewsheet-title"><dt>REP POINTS</dt></div>
+             <input placeholder="REP POINTS" class="form-control" type="number" value="{{ variables.rep_points is defined ? variables.rep_points: "0" }}" name="rep_points"/>
+            <div class="crewsheet-title"><dt>TIER</dt></div>
+            <input placeholder="TIER" class="form-control" type="number" value="{{ variables.tier is defined ? variables.tier :"0" }}" name="tier"/>
+			<div class="crewsheet-title"><dt>HOLD</dt></div>
+            <input placeholder="HOLD" class="form-control" type="select" value="{{ variables.hold is defined ? variables.hold:"WEAK" }}" name="hold"/>
+		</div>
+	    <div class="col-md-4"><h2>THE LAW</h2>
+			<div class="crewsheet-title"><dt>HEAT</dt></div>
+            <input placeholder="HEAT" class="form-control" type="number" value="{{ variables.heat is defined ? variables.heat : "0" }}" name="heat"/>
+            <div class="crewsheet-title"><dt>WANTED LEVEL</dt></div>
+            <input placeholder="WANTED LEVEL" class="form-control" type="number" value="{{ variables.wanted_level is defined ? variables.wanted_level :"0"}}" name="wanted_level"/>
+            <div class="crewsheet-title"><dt>TIER ADVANCE</dt></div>
+            <div class ="advcost">UPON CREW ADVANCE EACH MEMBER OF THE CREW GETS +1 STASH <br/>(+2 PER TIER). <br/> TO LEVEL UP TIER: IT COSTS FULL REP AND COIN EQUAL TO YOUR NEW TIER +8.</div>
+		</div>
+		<div class="col-md-4"><h2>VAULT</h2>
+			<div class="crewsheet-title"><dt>COIN</dt></div>
+                         <input placeholder="COIN" class="form-control" type="number" value="{{ variables.coin is defined ? variables.coin:"0" }}" name="coin"/>
+                         <div class="crewsheet-title"><b>CREW EXPERIENCE</b></div>
+                        <div class="crewadv-content"><b>AT THE END OF EACH SESSION, FOR EACH ITEM BELLOW MARK 1XP OR 2XP IF THAT ITEM OCCURRED MULTIPLE TIMES</b><br/><br/>EXECUTE A SUCCESSFUL {{ variables.experience_operations}} OPERATION<br/>CONTEND WITH CHALLENGES ABOVE YOUR CURRENT STATION<br/><br/>BOLSTER YOUR CREW'S REPUTATION OR DEVELOP A NEW ONE<br/></br>EXPRESS THE GOALS, DRIVES, INNER CONFLICT, OR ESSENTIAL NATURE OF THE CREW<br/></div>
+</div>
+</div>
+		<div class="row crew asset">
+		<div class="col-md-4"><h2>ASSESTS</h2>
+            <div class="crewsheet-title"><dt>CLAIMS</dt></div>
+           <input placeholder="CLAIMS" class="form-control" type="string" value="{{ variables.claims is defined ? variables.claims|ParseList:"NONE"}}" name="claims"/>
+            <div class="crewsheet-title"><dt>CONTACTS</dt></div>
+           <input placeholder="CONTACTS" class="form-control" type="string" value="{(variables.contacts is defined ? variables.contacts |ParseList:"NONE"}}" name="contacts"/>
+	</div>
+		<div class="col-md-4"><h2>SPECIAL ABILITIES</h2>
+			<div class="crewsheet-title"><dt>CREW EXPERIENCE POINTS</dt></div>
+            <input placeholder="CREW EXPERIENCE POINTS" class="form-control" type="number" value="{{variables.crew_experience_points is defined ? variables.crew_experience_points:"0" }}" name="crew_experience_points"/>
+            <div class="crewsheet-title"><dt>CREW SPECIAL ABILITIES</dt></div>
+            <input placeholder="CREW SPECIAL ABILITIES" class="form-control" type="string" value="{{variables.crew_special_abilities is defined ? variables.crew_special_abilities |ParseList:"NONE"}}" name="crew_special_abilities"/>
+		</div>
+		<div class="col-md-4"><h2>CREW SPECIAL PEOPLE</h2>
+			<div class="crewsheet-title"><dt>COHORTS</dt></div>
+             <input placeholder="COHORTS" class="form-control" type="string" value="{{ variables.cohorts is defined ? variables.cohorts |ParseList:"NONE"}}" name="cohorts"/>
+            <div class="crewsheet-title"><dt>TARGET AREAS</dt></div>
+              <input placeholder="TARGET AREAS" class="form-control" type="string" value={{variables.target_areas is defined ? variables.target_areas |ParseList: "NONE" }}" name= "target_areas"/>
+        </div>
+</div>
+		<div class="row upgrade">
+		<div class="col-md-12"><h2>UPGRADES</h2>
+            <div class="crewsheet-title"><dt>CREW UPGRADES</dt></div>
+           <input placeholder="TARGET AREAS" class="form-control" type="string" value={{ variables.crew_upgrades is defined ? variables.crew_upgrades |ParseList:"NONE"}}" name="crew_upgrades"/>
+            <div class="crewsheet-title"><dt>LAIR UPGRADES</dt></div>
+            <input placeholder="LAIR UPGRADES" class="form-control" type="string" value={{ variables.lair_upgrades is defined ? variables.lair_upgrades |ParseList:"NONE"}}" name="lair_upgrades"/>
+			<div class="crewsheet-title"><dt>TRAINING UPGRADES</dt></div>
+            <input placeholder="TRAINING UPGRADES" class="form-control" type="string" value={{variables.training_upgrades is defined ? variables.training_upgrades |ParseList:"NONE"}}" name="training_upgrades"/>
+			<div class="crewsheet-title"><dt>QUALITY UPGRADES</dt></div>
+          <input placeholder="QUALITY UPGRADES" class="form-control" type="string" value={{ variables.quality_upgrades is defined ? variables.quality_upgrades |ParseList:"NONE" }}" name="quality_upgrades"/>
+			<div class="crewsheet-title"><dt>COHORTS UPGRADES</dt></div>
+            <input placeholder="COHORTS UPGRADES" class="form-control" type="string" value={{ variables.cohorts_upgrades is defined ? variables.cohorts_upgrades |ParseList:"NONE"	}}" name="cohorts_upgrade"/>
+			<div class="crewsheet-title"><dt>MISSION TYPES</dt></div>
+            <div class="crewsheet-content"><dd> {{ variables.mission_types}} </dd></div>
+		</div>
+		</div>
+</div></div>

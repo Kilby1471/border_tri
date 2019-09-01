@@ -1,0 +1,82 @@
+ .container{
+background:#eee3c4;
+border-style: solid;
+border-color:#333333;
+border-width: 5px 5px 5px 20px;
+text-align:center;}
+ .row crew info{
+ border-style:;
+border-color:;
+border-width:;}
+ .crewsheet-title{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 5px 5px 0px 20px;
+font-size:24px;
+font:bold;}
+ .row strength{
+ border-style:;
+border-color:;
+border-width:;}
+ .row crew asset{
+ border-style:;
+border-color:;
+border-width:;}
+ .row upgrade{
+ border-style:;
+border-color:;
+border-width:;}
+ .crewsheet-title{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 5px 5px 0px 20px;
+font-size:24px;
+font:bold;}
+ .crewsheet-title{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 5px 5px 0px 20px;
+font-size:24px;
+font:bold;}
+ .crewsheet-title{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 5px 5px 0px 20px;
+font-size:24px;
+font:bold;}
+ .crewsheet-content{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 0px 5px 5px 20px;
+font-size:20px;}
+ .crewsheet-content2{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 0px 5px 5px 20px;
+font-size:10px;}
+ .crewadv-content{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 0px 5px 5px 20px;
+font-size:8px;
+font:italic;
+text-align:center;}
+ .advcost{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 0px 5px 5px 20px;
+font-size:8px;
+font:italic;
+text-align:center;}
+ h1{
+background:#0d0d0d;
+border-style:solid;
+border-color:#cc0000;
+border-width: 5px 20px 5px 5px;
+color:#cc0000;}
+ h2{
+ background:#0d0d0d;
+border-style:solid;
+border-color:#cc0000;
+border-width: 5px 20px 5px 5px;
+color:#cc0000;}
