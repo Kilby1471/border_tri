@@ -1,0 +1,96 @@
+ .container{
+background:#eee3c4;
+border-style: solid;
+border-color:#333333;
+border-width: 5px 5px 5px 20px;
+text-align:center;}
+ .compsheet-title{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 5px 5px 0px 20px;
+font-size:10px;
+font:bold;}
+ .compsheet-content{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 0px 5px 5px 20px;
+font-size:16px;}
+ .compsheet-title2{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 5px 5px 0px 20px;
+font-size:14px;
+font:bold;}
+ .compsheet-content2{
+ border-style: solid;
+border-color: #0d0d0d;
+border-width: 0px 5px 5px 20px;
+font-size:10px;}
+ h1{
+background:#0d0d0d;
+border-style:solid;
+border-color:#cc0000;
+border-width: 5px 20px 5px 5px;
+color:#cc0000;}
+ h2{
+ background:#0d0d0d;
+border-style:solid;
+border-color:#cc0000;
+border-width: 5px 20px 5px 5px;
+color:#cc0000;}
+ table.skill {
+  border: 5px 5px 5px 5px solid #000000;
+  background-color: #eee3c4;
+  width: 100%;
+  text-align: centre;
+  border-collapse: collapse;}
+ table.skill td,  table.skill th {
+  border: 1px solid #000000;
+  padding: 5px 4px;}
+ .skill tbody td {
+  font-size: 13px;}
+ table.skill thead {
+  background: #0d0d0d;
+  border-bottom: 3px solid #cc0000;
+border-top: 3px solid #cc0000;
+border-right: 15px solid #cc0000;}
+ table.skill thead th {
+  font-size: 14px;
+  font-weight: bold;
+  color: #cc0000;
+  text-align: centre;
+  border-left: 3pxpx solid #cc0000;}
+ table.skill thead th:first-child {
+  border-left: 3px solid #cc0000;}
+ table.skill tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  background: #9E9E9E;
+  border-top: 3px solid #000000;}
+ table.skill tfoot td {
+  font-size: 14px;}
+ table.harm {
+  border: 5px 5px 5px 5pxpx solid #000000;
+  background-color: #eee3c4;
+  width: 100%;
+  text-align: centre;
+  border-collapse: collapse;}
+ table.harm td,  table.skill th {
+  border: 1px solid #000000;
+  padding: 5px 4px;}
+ table.harm tbody td {
+  font-size: 13px;}
+ table.harm thead {
+  background: #0d0d0d;
+  border-bottom: 3px solid #cc0000;
+border-top: 3px solid #cc0000;
+border-right: 15px solid #cc0000;}
+ table.harm thead th {
+  font-size: 14px;
+  font-weight: bold;
+  color: #cc0000;
+  text-align: centre;
+  border-left: 3pxpx solid #cc0000;}
+ table.harm thead th:first-child {
+  border-left: 3px solid #cc0000;}

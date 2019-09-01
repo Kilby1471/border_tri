@@ -1,0 +1,270 @@
+<div class="container">
+<h1>COMPANION & NPC SHEET</h1>		
+    <div class="row char info ">
+		<div class="col-md-4">
+            <div class="compsheet-title"><dt>NAME</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.name}} </dd></div>
+            <div class="compsheet-title"><dt>ETHNICITY</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.ethnicity}} </dd></div>
+		</div>
+		<div class="col-md-4">
+	    <div class="compsheet-title"><dt>SPECIES</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.species}} </dd></div>
+             <div class="compsheet-title">LOOK</div>
+             <div class="compsheet-content"><dd> {{ variables.look}} </dd></div>
+		</div>
+		<div class="col-md-4">
+			  <div class="compsheet-title"><dt>BACKGROUND</dt></div>
+              <div class="compsheet-content"><dd> {{ variables.background}} </dd></div>
+		</div>
+	</div>
+<h2>BASIC INFORMATION</h2>
+     <div class="row basic info ">
+		<div class="col-md-4">
+            <div class="compsheet-title"><dt>CLASS</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.class}} </dd></div>
+            <div class="compsheet-title"><dt>HERITAGE</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.heritage}} </dd></div>
+		</div>
+		<div class="col-md-4">
+			<div class="compsheet-title"><dt>VIRTUES</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.virtues}} </dd></div>
+            <div class="compsheet-title"><dt>FLAWS</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.flaws}} </dd></div>
+		</div>
+		<div class="col-md-4">
+			<div class="compsheet-title"><dt>EXPERT SKILLS</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.expert_skills}} </dd></div>
+            <div class="compsheet-title"><dt>COMPANION QUALITY or SIZE</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.companion_quality_or_size}} </dd></div>
+		</div>
+	</div>
+<h2>VICE & TRAUMA</h2>
+	<div class="row vice trauma">
+		<div class="col-md-6">
+            <div class="compsheet-title"><dt>VICE</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.vice}} </dd></div>
+		</div>
+		<div class="col-md-6">
+			<div class="compsheet-title"><dt>TRAUMA</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.trauma}} </dd></div>
+        </div>
+</div>
+<h2>INJURY & HEALING</h2>	
+	<div class="row injury">
+		<div class="col-md-12">
+				<table class="harm">
+					<thead>
+						<tr>
+							<th>Lvl of Harm</th>
+							<th>Injury</th>
+							<th>Effect</th>
+							<th>Healing</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lvl 1</td>
+							<td><dd> {{ variables.lvl_1_harm}} </dd></td>
+							<td>Less Effect</td>
+							<td>Automatic in downtime</td>
+						</tr>
+						<tr>
+							<td>Lvl 2</td>
+							<td><dd> {{ variables.lvl_2_harm}} </dd></td>
+							<td>-1 Dice</td>
+							<td><dd> {{ variables.lvl_2_healing_clock}} </dd></td>
+						</tr>
+						<tr>
+							<td>Lvl 3</td>
+							<td><dd> {{ variables.lvl_3_harm}} </dd></td>
+							<td>Need help</td>
+							<td><dd> {{ variables.lvl_3_healing_clock}} </dd></td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+    </div>
+<h2>WEALTH</h2>
+	<div class="row wealth">
+			<div class="col-md-12">
+			<div class="compsheet-title"><dt>LIFESTYLE LEVEL</dt></div>
+            <div class="compsheet-content"><dd> {{ variables.lifestyle_level}} </dd></div>
+         </div>
+	</div>
+<h2>SKILLS</h2>
+  	<div class="row skills ">
+		<div class="col-md-4">
+            <div class="compsheet-title"><h2>INSIGHT SKILLS</h2></div>
+				<table class="skill">
+					<thead>
+						<tr>
+							<th>SKILL</th>
+							<th>POINTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><dt>HUNT</dt></td>
+							<td><dd> {{ variables.hunt}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>STUDY</dt></td>
+							<td><dd> {{ variables.study}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>SURVEY</dt></td>
+							<td><dd> {{ variables.survey}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>TINKER</dt></td>
+							<td><dd> {{ variables.tinker}} </dd></td>
+						</tr>
+					</tbody>
+				</table>
+			
+				        <div class="compsheet-title">INSIGHT ATTRIBUTE</div>
+                        <div class="compsheet-content">{% set insight_att = 0 %}
+{% if variables.hunt is defined  and variables.hunt > 0%}
+    {% set insight_att = insight_att + 1 %}    
+{% endif %}
+{% if  variables.study is defined and variables.study > 0 %}
+  {% set insight_att = insight_att + 1 %} 
+  {% endif %}
+{% if  variables.survey is defined and variables.survey > 0 %}
+ {% set insight_att = insight_att + 1 %} 
+ {% endif %}
+{% if variables.tinker is defined and variables.tinker > 0 %}
+{% set insight_att = insight_att + 1 %} 
+{% endif %}
+{{ insight_att }}</div>
+		</div>
+		<div class="col-md-4">
+			<div class="compsheet-title"><h2>PROWESS SKILLS</h2></div>
+				<table class="skill">
+					<thead>
+						<tr>
+							<th>SKILL</th>
+							<th>POINTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><dt>FINESSE</dt></td>
+							<td><dd> {{ variables.finesse}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>PROWL</dt></td>
+							<td><dd> {{ variables.prowl}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>SKIRMISH</dt></td>
+							<td><dd> {{ variables.skirmish}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>WRECK</dt></td>
+							<td><dd> {{ variables.wreck}} </dd></td>
+						</tr>
+					</tbody>
+				</table>
+							<div class="compsheet-title">PROWESS ATTRIBUTE</div>
+							<div class="compsheet-content">{% set prowess_att = 0 %}
+{% if variables.finesse is defined  and variables.finesse > 0 %}
+    {% set prowess_att = prowess_att + 1 %}    
+{% endif %}
+{% if  variables.prowl is defined and variables.prowl > 0 %}
+  {% set prowess_att = prowess_att + 1 %} 
+  {% endif %}
+{% if  variables.skirmish is defined and variables.skirmish > 0 %}
+ {% set prowess_att = prowess_att + 1 %} 
+ {% endif %}
+{% if variables.wreck is defined and variables.wreck > 0 %}
+{% set prowess_att = prowess_att + 1 %} 
+{% endif %}
+{{ prowess_att }}</div>
+		</div>
+							
+		
+		<div class="col-md-4">
+			<div class="compsheet-title"><h2>RESOLVE SKILLS</h2></div>
+				<table class="skill">
+					<thead>
+						<tr>
+							<th>SKILL</th>
+							<th>POINTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><dt>ATTUNE</dt></td>
+							<td><dd> {{ variables.attune}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>COMMAND</dt></td>
+							<td><dd> {{ variables.command}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>CONSORT</dt></td>
+							<td><dd> {{ variables.consort}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>SWAY</dt></td>
+							<td><dd> {{ variables.sway}} </dd></td>
+						</tr>
+					</tbody>
+				</table>
+						<div class="compsheet-title">RESOLVE ATTRIBUTE</div>
+						<div class="compsheet-content">{% set resolve_att = 0 %}
+{% if variables.attune is defined  and variables.attune > 0 %}
+    {% set resolve_att = resolve_att + 1 %}    
+{% endif %}
+{% if  variables.command is defined and variables.command > 0 %}
+  {% set resolve_att = resolve_att + 1 %} 
+  {% endif %}
+{% if  variables.consort is defined and variables.consort > 0 %}
+ {% set resolve_att = resolve_att + 1 %} 
+ {% endif %}
+{% if variables.sway is defined and variables.sway > 0 %}
+{% set resolve_att = resolve_att + 1 %} 
+{% endif %}
+{{ resolve_att }}</div>
+		</div>			
+	</div>
+<h2>SPECIAL ABILITIES</h2>
+	<div class="row playbook abilities">
+		<div class="col-md-12">
+                <div class="compsheet-title"><dt>SPECIAL ABILITIES</dt></div>
+                <div class ="compsheet-content"><dd> {{ variables.special_abilities}} </dd></div>
+        </div>
+	</div>
+<h2>USEFUL INFORMATION</h2>
+	<div class="row useful info">
+		<div class="col-md-3">
+			<div class="compsheet-title2">NOTES</div>
+			<div class="compsheet-content2"><dd> {{ variables.notes}} </dd></div>
+		</div>
+		<div class="col-md-3">
+			<div class="compsheet-title2">ITEMS</div>
+			<div class="compsheet-content2"><dd> {{ variables.items}} </dd></div>
+		</div>
+		<div class="col-md-3">
+			<div class="compsheet-title2">FACTIONS & LOYALTY</div>
+			<div class="compsheet-content2"><dd> {{ variables.factions__loyalty}} </dd></div>
+		</div>
+		<div class="col-md-3">
+			<div class="compsheet-title2">PROFESSION</div>
+			<div class="compsheet-content2"><dd> {{ variables.profession}} </dd></div>
+		</div>
+	</div>
+<h2>FRIENDS & RIVALS</h2>
+	<div class="row friendsnrivals">
+			<div class="col-md-6">
+				<div class="compsheet-title"><dt>FRIENDS </dt></div>
+				<div class="compsheet-content"><dd> {{ variables.friends}} </dd></div>
+			</div>
+			<div class="col-md-6">
+				<div class="compsheet-title"><dt>RIVALS</dt></div>
+				<div class="compsheet-content"><dd> {{ variables.rivals}} </dd></div>
+			</div>
+	</div>
+</div>
