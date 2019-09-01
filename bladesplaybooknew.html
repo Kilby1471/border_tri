@@ -1,0 +1,321 @@
+<div class="container">
+<h1>PLAY BOOK FOR {{ variables.name }}</h1>		
+    <div class="row char info ">
+		<div class="col-md-4">
+            <div class="charsheet-title"><dt>ALIAS</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.alias}} </dd></div>
+            <div class="charsheet-title"><dt>HERITAGE</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.heritage}} </dd></div>
+		</div>
+		<div class="col-md-4">
+	     <div class="charsheet-title"><dt>LOOK</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.look}} </dd></div>
+		</div>
+		<div class="col-md-4">
+			<div class="charsheet-title"><dt>PLAYBOOK</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.playbook}} </dd></div>
+            <div class="charsheet-title"><dt>BACKGROUND</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.background}} </dd><dd> {{ variables.background_expanded}} </dd></div>
+		</div>
+	</div>
+<h2>CREW INFORMATION</h2>
+     <div class="row crew info ">
+		<div class="col-md-4">
+            <div class="charsheet-title"><dt>CREW TYPE</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.crew_type}} </dd></div>
+            <div class="charsheet-title"><dt>TIER & HOLD</dt></div>
+            <div class="charsheet-content"><dd>{{ variables.crew_tier_}}</dd><dd>{{ variables.hold}} </dd></div>
+		</div>
+		<div class="col-md-4">
+			<div class="charsheet-title"><dt>HUNTING GROUNDS & LAIR</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.hunting_grounds__lair}} </dd></div>
+            <div class="charsheet-title"><dt>CREWS REPUTATION</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.crews_reputation}} </dd></div>
+		</div>
+		<div class="col-md-4">
+			<div class="charsheet-title"><dt>CREW NAME</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.crew_name}} </dd></div>
+            <div class="charsheet-title"><dt>CREW COINS</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.crew_coins}} </dd></div>
+		</div>
+	</div>
+<h2>STRESS, VICE & TRAUMA</h2>
+	<div class="row stress vice trauma">
+		<div class="col-md-4">
+            <div class="charsheet-title"><dt>STRESS</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.stress}} </dd></div>
+		</div>
+		<div class="col-md-4">
+			<div class="charsheet-title"><dt>VICE</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.vice}} </dd><dd> {{ variables.vice_expanded}} </dd></div>
+        </div>
+		<div class="col-md-4">
+			<div class="charsheet-title"><dt>TRAUMA</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.trauma}} </dd></div>
+         </div>
+	</div>
+<h2>INJURY & HEALING</h2>	
+	<div class="row injury">
+		<div class="col-md-12">
+				<table class="harm">
+					<thead>
+						<tr>
+							<th>Lvl of Harm</th>
+							<th>Injury</th>
+							<th>Effect</th>
+							<th>Healing</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lvl 1 1st</td>
+							<td>{{ variables.injury_lvl_1_1st}}</td>
+							<td>Less Effect</td>
+							<td>Automatic in downtime</td>
+						</tr>
+						<tr>
+							<td>Lvl 1 2nd</td>
+							<td>{{ variables.injury_lv_1_2nd}}</td>
+							<td>Less Effect</td>
+							<td>Automatic in downtime</td>
+						</tr>
+						<tr>
+							<td>Lvl 2 1st</td>
+							<td>{{ variables.injury_lvl_2_1st}}</td>
+							<td>-1 Dice</td>
+							<td>{{ variables.healing_clock_level_2_1st_injury}}</td>
+						</tr>
+						<tr>
+							<td>Lvl 2 2nd</td>
+							<td>{{ variables.injury_lv_2_2nd}}</td>
+							<td>-1 Dice</td>
+							<td>{{ variables.healing_clock_level_2_2nd_injury}}</td>
+						</tr>
+						<tr>
+							<td>Lvl 3</td>
+							<td>{{ variables.injury_lvl_3}}</td>
+							<td>Need help</td>
+							<td>{{ variables.healing_clock_lvl_3_harm}}</td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+    </div>
+<h2>WEALTH</h2>	
+	<div class="row coin stash lifestyle">
+		<div class="col-md-4">
+            <div class="charsheet-title"><dt>COIN IN HAND</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.coin_in_hand}} </dd></div>
+		</div>
+		<div class="col-md-4">
+			<div class="charsheet-title"><dt>STASH</dt></div>
+            <div class="charsheet-content"><dd> {{ variables.stash}} </dd></div>
+		</div>	
+		<div class="col-md-4">
+			<div class="charsheet-title"><dt>LIFESTYLE LEVEL</dt></div>
+            <div class="charsheet-content">{% set life_lvl = 0 %}
+{% if variables.stash is defined  and variables.stash > 9 %}
+    {% set life_lvl = life_lvl + 1 %}    
+{% endif %}
+{% if  variables.stash is defined and variables.stash > 19 %}
+  {% set life_lvl = life_lvl + 1 %} 
+  {% endif %}
+{% if  variables.stash is defined and variables.stash > 29 %}
+ {% set life_lvl = life_lvl + 1 %} 
+ {% endif %}
+{% if variables.stash is defined and variables.stash  > 39 %}
+{% set life_lvl = life_lvl + 1 %} 
+{% endif %}
+{{ life_lvl }}</div>
+         </div>
+	</div>
+<h2>SKILLS</h2>
+  	<div class="row skills ">
+		<div class="col-md-4">
+            <div class="charsheet-title"><h2>INSIGHT SKILLS</h2></div>
+				<table class="skill">
+					<thead>
+						<tr>
+							<th>SKILL</th>
+							<th>POINTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><dt>HUNT</dt></td>
+							<td><dd> {{ variables.hunt}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>STUDY</dt></td>
+							<td><dd>{{variables.study}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>SURVEY</dt></td>
+							<td><dd> {{ variables.survey}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>TINKER</dt></td>
+							<td><dd> {{ variables.tinker}} </dd></td>
+						</tr>
+					</tbody>
+				</table>
+			
+				        <div class="charsheet-title">INSIGHT ATTRIBUTE</div>
+                        <div class="charsheet-content">{% set insight_att = 0 %}
+{% if variables.hunt is defined  and variables.hunt > 0%}
+    {% set insight_att = insight_att + 1 %}    
+{% endif %}
+{% if  variables.study is defined and variables.study > 0 %}
+  {% set insight_att = insight_att + 1 %} 
+  {% endif %}
+{% if  variables.survey is defined and variables.survey > 0 %}
+ {% set insight_att = insight_att + 1 %} 
+ {% endif %}
+{% if variables.tinker is defined and variables.tinker > 0 %}
+{% set insight_att = insight_att + 1 %} 
+{% endif %}
+{{ insight_att }}</div>
+						<div class="charsheet-title"><dt>INSIGHT EXPERIENCE </dt></div>
+                        <div class="charsheet-content"><dd> {{ variables.insight_experience_}} </dd></div>
+				        
+			
+		</div>
+		<div class="col-md-4">
+			<div class="charsheet-title"><h2>PROWESS SKILLS</h2></div>
+				<table class="skill">
+					<thead>
+						<tr>
+							<th>SKILL</th>
+							<th>POINTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><dt>FINESSE</dt></td>
+							<td><dd> {{ variables.finesse}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>PROWL</dt></td>
+							<td><dd> {{ variables.prowl}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>SKIRMISH</dt></td>
+							<td><dd> {{ variables.skirmish}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>WRECK</dt></td>
+							<td><dd> {{ variables.wreck}} </dd></td>
+						</tr>
+					</tbody>
+				</table>
+							<div class="charsheet-title">PROWESS ATTRIBUTE</div>
+							<div class="charsheet-content">{% set prowess_att = 0 %}
+{% if variables.finesse is defined  and variables.finesse > 0%}
+    {% set prowess_att = prowess_att + 1 %}    
+{% endif %}
+{% if  variables.prowl is defined and variables.prowl > 0 %}
+  {% set prowess_att = prowess_att + 1 %} 
+  {% endif %}
+{% if  variables.skirmish is defined and variables.skirmish > 0 %}
+ {% set prowess_att = prowess_att + 1 %} 
+ {% endif %}
+{% if variables.wreck is defined and variables.wreck > 0 %}
+{% set prowess_att = prowess_att + 1 %} 
+{% endif %}
+{{ prowess_att }}</div>
+							<div class="charsheet-title"><dt>PROWESS EXPERIENCE </div>
+							<div class="charsheet-content"></dt><dd> {{ variables.prowess_experience_}} </dd></div>
+							
+		</div>
+		<div class="col-md-4">
+			<div class="charsheet-title"><h2>RESOLVE SKILLS</h2></div>
+				<table class="skill">
+					<thead>
+						<tr>
+							<th>SKILL</th>
+							<th>POINTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><dt>ATTUNE</dt></td>
+							<td><dd> {{ variables.attune}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>COMMAND</dt></td>
+							<td><dd> {{ variables.command}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>CONSORT</dt></td>
+							<td><dd> {{ variables.consort}} </dd></td>
+						</tr>
+						<tr>
+							<td><dt>SWAY</dt></td>
+							<td><dd> {{ variables.sway}} </dd></td>
+						</tr>
+					</tbody>
+				</table>
+						<div class="charsheet-title">RESOLVE ATTRIBUTE</div>
+						<div class="charsheet-content">{% set resolve_att = 0 %}
+{% if variables.attune is defined  and variables.attune > 0%}
+    {% set resolve_att = resolve_att + 1 %}    
+{% endif %}
+{% if  variables.command is defined and variables.command > 0 %}
+  {% set resolve_att = resolve_att + 1 %} 
+  {% endif %}
+{% if  variables.consort is defined and variables.consort > 0 %}
+ {% set resolve_att = resolve_att + 1 %} 
+ {% endif %}
+{% if variables.sway is defined and variables.sway > 0 %}
+{% set resolve_att = resolve_att + 1 %} 
+{% endif %}
+{{ resolve_att }}</div>
+						<div class="charsheet-title"><dt>RESOLVE EXPERIENCE</dt></div>
+						<div class="charsheet-content"><dd> {{ variables.resolve_experience}} </dd>
+			</div>			
+		</div>
+	</div>
+<h2>PLAYBOOK INFORMATION</h2>
+	<div class="row playbook abilities">
+		<div class="col-md-12">
+               <div class="charsheet-title"><dt>PLAYBOOK EXPERIENCE </dt></div>
+                <div class ="charsheet-content"><dd> {{ variables.playbook_experience_}} </dd></div>
+                <div class="charsheet-title"><dt>SPECIAL ABILITIES</dt></div>
+                <div class ="charsheet-content"><dd> {{ variables.special_abilities}} </dd></div>
+                <div class="charsheet-title"><dt>VETERAN ABILITIES</dt></div>
+                <div class ="charsheet-content"><dd> {{ variables.veteran_abilities}} </dd></div>
+		</div>
+	</div>
+<h2>USEFUL INFORMATION</h2>
+	<div class="row useful info">
+		<div class="col-md-3">
+			<div class="charsheet-title2">EXPERIANCE</div>
+			<div class="charsheet-content2"><ul><li>Every time you roll <b>a desperate action</b>, tak 1 exp in that actions skill class, <b>straight away</b></li></ul><br/>At the end of each session, for each item bellow mark 1 exp (in your playbook exp or skill class exp) or 2 exp if it happened multiple times. </br> <ul> <li>You addresses a challenge with <em>{{ variables.play_book_exp_trigger}}</em></li><li>You expressed your beliefs, drives, heritage or background.</li><li>You struggled with issues from your vice or trauma</li></ui></div>
+		</div>
+		<div class="col-md-3">
+			<div class="charsheet-title2">TEAM WORK</div>
+			<div class="charsheet-content2"><ul><li><b>Assist</b> a team mate</b></li><li>Lead <b>group action.</b></li><li><b>Protect</b> a teammate.</li><li><b>Set up</b> a teammate</li></ul></div>
+			<div class="charsheet-title2">BONUS DIE</div>
+			<div class="charsheet-content2"><b>PUSH YOURSELF:</b>(take 2 stress)<br/>Accept a <b>DEVILS BARGIN</b></div>
+		</div>
+		<div class="col-md-3">
+			<div class="charsheet-title2">PLANNING & LOAD</div>
+			<div class="charsheet-content2"><big>Choose a plan, provide the <b>detail</b>. Choose your <b>load</b> limit for the score.</big><br/><b>Assault:</b> Point of attack<br/><b>Deception:</b> Method<br/> <b>Stealth:</b> Entry point<b>Occult:</b> Arcane power <br/><b>Social:</b> Connection<br/><b>Transport:</b> Route.</div>
+		</div>
+		<div class="col-md-3">
+			<div class="charsheet-title2">GATHER INFORMATION</div>
+			<div class="charsheet-content2"><ul><li>What do they intend to do?</li><li>How can I get the to X</li><li>What are they really feeling?</li><li>Where are they vulnerable?</li><li>Where did X go?</li><li>How do I find X</li><li>Whats really going on here?</li></ul></div>
+		</div>
+	</div>
+<h2>FRIENDS & RIVALS</h2>
+		<div class="row friendsnrivals">
+			<div class="col-md-6">
+				<div class="charsheet-title"><dt>FRIENDS </dt></div>
+				<div class="charsheet-content"><dd> {{ variables.friends_}} </dd></div>
+			</div>
+			<div class="col-md-6">
+				<div class="charsheet-title"><dt>RIVALS</dt></div>
+				<div class="charsheet-content"><dd> {{ variables.rivals}} </dd></div>
+			</div>
+	</div>
+</div>

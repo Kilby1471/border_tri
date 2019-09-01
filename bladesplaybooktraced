@@ -1,0 +1,193 @@
+<section class="blades_in_the_dark-crew-trackable">
+<div class="container">
+<h1>TRACKED PLAY BOOK FOR {{ variables.name }}</h1>
+<h2>STRESS & WEALTH</h2>
+	<div class="row stress vice trauma">
+		<div class="col-md-4">
+            <div class="charsheet-title"><dt>STRESS</dt></div>
+            <div class="charsheet-content"><input placeholder="STRESS" class="form-control" Type="number" value="{{ variables.stress is defined ? variables.stress }}" name="stress"/></div>
+		</div>
+		<div class="col-md-4">
+			<div class="charsheet-title">COINS IN HAND</div>
+            <div class="charsheet-content"><input placeholder="COIN IN HAND" class="form-control" Type="number" value="{{ variables.coin_in_hand is defined ? variables.coin_in_hand }}" name="coin_in_hand"/></div>
+        </div>
+		<div class="col-md-4">
+			<div class="charsheet-title"><dt>STASH</dt></div>
+           <div class="charsheet-content"><input placeholder="STASH" class="form-control" Type="number" value="{{ variables.stash is defined ? variables.stash }}" name="stash"/></div>
+         </div>
+	</div>
+<h2>INJURY & HEALING</h2>	
+	<div class="row injury">
+		<div class="col-md-12">
+				<table class="harm">
+					<thead>
+						<tr>
+							<th>Lvl of Harm</th>
+							<th>Injury</th>
+							<th>Effect</th>
+							<th>Healing</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lvl 1 1st</td>
+							<td><input placeholder="INJURY LVL 1 1ST" class="form-control" Type="string" value="{{ variables.injury_lvl_1_1st is defined ? variables.injury_lvl_1_1st }}" name="injury_lvl_1_1st"/></td>
+							<td>Less Effect</td>
+							<td>Automatic in downtime</td>
+						</tr>
+						<tr>
+							<td>Lvl 1 2nd</td>
+							<td><input placeholder="INJURY LVL 1 2ND" class="form-control" Type="string" value="{{ variables.injury_lv_1_2nd is defined ? variables.injury_lv_1_2nd }}" name="injury_lv_1_2nd"/></td>
+							<td>Less Effect</td>
+							<td>Automatic in downtime</td>
+						</tr>
+						<tr>
+							<td>Lvl 2 1st</td>
+							<td><input placeholder="INJURY LVL 2 1ST" class="form-control" Type="string" value="{{ variables.injury_lvl_2_1st is defined ? variables.injury_lvl_2_1st }}" name="injury_lvl_2_1st"/></td>
+							<td>-1 Dice</td>
+							<td><input placeholder="HEALING CLOCK LEVEL 2 1ST INJURY" class="form-control" Type="number" value="{{ variables.healing_clock_level_2_1st_injury is defined ? variables.healing_clock_level_2_1st_injury }}" name="healing_clock_level_2_1st_injury"/></td>
+						</tr>
+						<tr>
+							<td>Lvl 2 2nd</td>
+							<td><input placeholder="INJURY LVL 2 2ND" class="form-control" Type="string" value="{{ variables.injury_lv_2_2nd is defined ? variables.injury_lv_2_2nd }}" name="injury_lv_2_2nd"/></td>
+							<td>-1 Dice</td>
+							<td><input placeholder="HEALING CLOCK LEVEL 2 2ND INJURY" class="form-control" Type="number" value="{{ variables.healing_clock_level_2_2nd_injury is defined ? variables.healing_clock_level_2_2nd_injury }}" name="healing_clock_level_2_2nd_injury"/></td>
+						</tr>
+						<tr>
+							<td>Lvl 3</td>
+							<td><input placeholder="INJURY LVL 3" class="form-control" Type="string" value="{{ variables.injury_lvl_3 is defined ? variables.injury_lvl_3 }}" name="injury_lvl_3"/></td>
+							<td>Need help</td>
+							<td><input placeholder="HEALING CLOCK LVL 3 HARM" class="form-control" Type="number" value="{{ variables.healing_clock_lvl_3_harm is defined ? variables.healing_clock_lvl_3_harm }}" name="healing_clock_lvl_3_harm"/></td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+    </div>
+<h2>SKILLS</h2>
+  	<div class="row skills ">
+		<div class="col-md-4">
+            <div class="charsheet-title"><h2>INSIGHT SKILLS</h2></div>
+				<table class="skill">
+					<thead>
+						<tr>
+							<th>SKILL</th>
+							<th>POINTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><dt>HUNT</dt></td>
+							<td><input placeholder="HUNT" class="form-control" Type="number" value="{{ variables.hunt is defined ? variables.hunt }}" name="hunt"/></td>
+						</tr>
+						<tr>
+							<td><dt>STUDY</dt></td>
+							<td><input placeholder="STUDY" class="form-control" Type="number" value="{{ variables.study is defined ? variables.study }}" name="study"/></td>
+						</tr>
+						<tr>
+							<td><dt>SURVEY</dt></td>
+							<td><input placeholder="SURVEY" class="form-control" Type="number" value="{{ variables.survey is defined ? variables.survey }}" name="survey"/></td>
+						</tr>
+						<tr>
+							<td><dt>TINKER</dt></td>
+							<td><input placeholder="TINKER" class="form-control" Type="number" value="{{ variables.tinker is defined ? variables.tinker }}" name="tinker"/></td>
+						</tr>
+					</tbody>
+				</table>
+			
+				        <div class="charsheet-title"><dt>INSIGHT EXPERIENCE </dt></div>
+                        <div class="charsheet-content"><input placeholder="INSIGHT EXPERIENCE" class="form-control" Type="number" value="{{ variables.insight_experience_ is defined ? variables.insight_experience_ }}" name="insight_experience_"/></div>
+		</div>
+		<div class="col-md-4">
+			<div class="charsheet-title"><h2>PROWESS SKILLS</h2></div>
+				<table class="skill">
+					<thead>
+						<tr>
+							<th>SKILL</th>
+							<th>POINTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><dt>FINESSE</dt></td>
+							<td><input placeholder="FINESSE" class="form-control" Type="number" value="{{ variables.finesse is defined ? variables.finesse }}" name="finesse"/></td>
+						</tr>
+						<tr>
+							<td><dt>PROWL</dt></td>
+							<td><input placeholder="PROWL" class="form-control" Type="number" value="{{ variables.prowl is defined ? variables.prowl:'0' }}" name="prowl"/></td>
+						</tr>
+						<tr>
+							<td><dt>SKIRMISH</dt></td>
+							<td><input placeholder="SKIRMISH" class="form-control" Type="number" value="{{variables.skirmish is defined ? variables.skirmish }}" name="skirmish"/></td>
+						</tr>
+						<tr>
+							<td><dt>WRECK</dt></td>
+							<td><input placeholder="WRECK" class="form-control" Type="number" value="{{ variables.wreck is defined ? variables.wreck }}" name="wreck"/></td>
+						</tr>
+					</tbody>
+				</table>
+							<div class="charsheet-title"><dt>PROWESS EXPERIENCE </div>
+							<div class="charsheet-content"></dt><input placeholder="PROWESS EXPERIENCE" class="form-control" Type="number" value="{{ variables.prowess_experience_ is defined ? variables.prowess_experience_ }}" name="prowess_experience_"/></div>
+		</div>					
+		
+		<div class="col-md-4">
+			<div class="charsheet-title"><h2>RESOLVE SKILLS</h2></div>
+				<table class="skill">
+					<thead>
+						<tr>
+							<th>SKILL</th>
+							<th>POINTS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><dt>ATTUNE</dt></td>
+							<td><input placeholder="ATTUNE" class="form-control" Type="number" value="{{ variables.attune is defined ? variables.attune }}" name="attune"/></td>
+						</tr>
+						<tr>
+							<td><dt>COMMAND</dt></td>
+							<td><input placeholder="COMMAND" class="form-control" Type="number" value="{{ variables.command is defined ? variables.command }}" name="command"/></td>
+						</tr>
+						<tr>
+							<td><dt>CONSORT</dt></td>
+							<td><input placeholder="CONSORT" class="form-control" Type="number" value="{{ variables.consort is defined ? variables.consort }}" name="consort"/></td>
+						</tr>
+						<tr>
+							<td><dt>SWAY</dt></td>
+							<td><input placeholder="SWAY" class="form-control" Type="number" value="{{ variables.sway is defined ? variables.sway }}" name="sway"/></td>
+						</tr>
+					</tbody>
+				</table>
+						<div class="charsheet-title"><dt>RESOLVE EXPERIENCE</dt></div>
+						<div class="charsheet-content"><input placeholder="RESOLVE EXPERIENCE" class="form-control" Type="number" value="{{ variables.resolve_experience is defined ? variables.resolve_experience }}" name="resolve_experience"/></div>
+		</div>
+</div>	
+<h2>PLAYBOOK INFORMATION</h2>
+	<div class="row playbook abilities">
+		<div class="col-md-12">
+               <div class="charsheet-title"><dt>PLAYBOOK EXPERIENCE </dt></div>
+                <div class ="charsheet-content"><input placeholder="PLAYBOOK EXPERIENCE" class="form-control" Type="number" value="{{ variables.playbook_experience_ is defined ? variables.playbook_experience_ }}" name="playbook_experience"/></div>
+                </div>
+	</div>
+<h2>USEFUL INFORMATION</h2>
+	<div class="row useful info">
+		<div class="col-md-3">
+			<div class="charsheet-title2">EXPERIANCE</div>
+			<div class="charsheet-content2"><ul><li>Every time you roll <b>a desperate action</b>, take 1 exp in that actions skill class, <b>straight away</b></li></ul><br/>At the end of each session, for each item bellow mark 1 exp (in your playbook exp or skill class exp) or 2 exp if it happened multiple times. </br> <ul> <li>You addresses a challenge with <em>{{ variables.play_book_exp_trigger}}</em></li><li>You expressed your beliefs, drives, heritage or background.</li><li>You struggled with issues from your vice or trauma</li></ui></div>
+		</div>
+		<div class="col-md-3">
+			<div class="charsheet-title2">TEAM WORK</div>
+			<div class="charsheet-content2"><ul><li><b>Assist</b> a team mate</b></li><li>Lead <b>group action.</b></li><li><b>Protect</b> a teammate.</li><li><b>Set up</b> a teammate</li></ul></div>
+			<div class="charsheet-title2">BONUS DIE</div>
+			<div class="charsheet-content2"><b>PUSH YOURSELF:</b>(take 2 stress)<br/>Accept a <b>DEVILS BARGIN</b></div>
+		</div>
+		<div class="col-md-3">
+			<div class="charsheet-title2">PLANNING & LOAD</div>
+			<div class="charsheet-content2"><big>Choose a plan, provide the <b>detail</b>. Choose your <b>load</b> limit for the score.</big><br/><b>Assault:</b> Point of attack<br/><b>Deception:</b> Method<br/> <b>Stealth:</b> Entry point<b>Occult:</b> Arcane power <br/><b>Social:</b> Connection<br/><b>Transport:</b> Route.</div>
+		</div>
+		<div class="col-md-3">
+			<div class="charsheet-title2">GATHER INFORMATION</div>
+			<div class="charsheet-content2"><ul><li>What do they intend to do?</li><li>How can I get the to X</li><li>What are they really feeling?</li><li>Where are they vulnerable?</li><li>Where did X go?</li><li>How do I find X</li><li>Whats really going on here?</li></ul></div>
+		</div>
+	</div>
+</div>
+</section>
